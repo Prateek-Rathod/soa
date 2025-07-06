@@ -1,0 +1,124 @@
+/* Prevent scrolling */
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(135deg, #111827, #1f2937);
+  color: #e5e7eb;
+  background-attachment: fixed;
+}
+
+/* Container Styling */
+.container {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(255, 192, 203, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  background: linear-gradient(to right, #f43f5e, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Grid Layout */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* Service Card */
+.service-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid #374151;
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 35px rgba(255, 192, 203, 0.15);
+}
+
+/* Card Title */
+.service-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #f9fafb;
+}
+
+/* Description Text */
+.service-card p {
+  font-size: 1rem;
+  color: #cbd5e1;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: linear-gradient(to right, #f43f5e, #f59e0b);
+  color: #ffffff;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(244, 63, 94, 0.4);
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #be123c, #b45309);
+  transform: scale(1.07);
+}
+
+/* Status text */
+.status {
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: #22c55e;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 18px;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+
+  .services {
+    gap: 20px;
+  }
+}
